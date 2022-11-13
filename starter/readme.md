@@ -59,15 +59,15 @@ The API will return three error types when requests fail:
 1. Returns employee designation, id, name and success status.
 2. Use postman to hit link https://capestone-employee.herokuapp.com/employees with token.
 
-{
-    "employees": [
-        {
-            "designation": "Director1",
-            "id": 1,
-            "name": "Nitin1"
-        }
-    ],
-    "success": true
+{\
+    "employees": [\
+        {\
+            "designation": "Director1",\
+            "id": 1,\
+            "name": "Nitin1"\
+        }\
+    ],\
+    "success": true\
 }
 
 ## GET /questions

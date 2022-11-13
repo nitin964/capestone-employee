@@ -57,8 +57,9 @@ The API will return three error types when requests fail:
 
 ## GET /employees
 1. Returns employee designation, id, name and success status.
-2. Use postman to hit link https://capestone-employee.herokuapp.com/employees with token.
+2. Use postman to hit link https://capestone-employee.herokuapp.com/employees with bearer token. METHODS="GET"
 
+Response:
 {\
     "employees": [\
         {\
@@ -70,390 +71,73 @@ The API will return three error types when requests fail:
     "success": true\
 }
 
-## GET /questions
+## GET /employee/{Employee_id}
 
-1. Returns success values, all categories and question.
-2. Questions are paginated and 10 questions are returned in single execution.
-3. Sample: curl http://127.0.0.1:5000/questions
+1. Returns success value with addresss, designation, dob, id and name of given employee ID.
+2. Use postman to hit link https://capestone-employee.herokuapp.com/employees/1 with bearer token. METHODS="GET"
 
-Response
+Response:
 {\
-  "categories": {\
-    "1": "Science",\
-    "2": "Art",\
-    "3": "Geography",\
-    "4": "History",\
-    "5": "Entertainment",\
-    "6": "Sports"\
-  },\
-  "currentCategory": null,\
-  "questions": [\
-    {\
-      "answer": "Apollo 13",\
-      "category": "5",\
-      "difficulty": 4,\
-      "id": 2,\
-      "question": "What movie earned Tom Hanks his third straight Oscar nomination, in 1996?"\
+    "employees": {\
+        "address": "Rani Bagh",\
+        "designation": "Director1",\
+        "dob": "Tue, 28 Jun 1988 00:00:00 GMT",\
+        "id": 1,\
+        "name": "Nitin1"\
     },\
-    {\
-      "answer": "Tom Cruise",\
-      "category": "5",\
-      "difficulty": 4,\
-      "id": 4,\
-      "question": "What actor did author Anne Rice first denounce, then praise in the role of her beloved Lestat?"\
-    },\
-    {\
-      "answer": "Maya Angelou",\
-      "category": "4",\
-      "difficulty": 2,\
-      "id": 5,\
-      "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"\
-    },\
-    {\
-      "answer": "Edward Scissorhands",\
-      "category": "5",\
-      "difficulty": 3,\
-      "id": 6,\
-      "question": "What was the title of the 1990 fantasy directed by Tim Burton about a young man with multi-bladed appendages?"\
-    },\
-    {\
-      "answer": "which",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 8,\
-      "question": "this"\
-    },\
-    {\
-      "answer": "Muhammad Ali",\
-      "category": "4",\
-      "difficulty": 1,\
-      "id": 9,\
-      "question": "What boxer's original name is Cassius Clay?"\
-    },\
-    {\
-      "answer": "Brazil",\
-      "category": "6",\
-      "difficulty": 3,\
-      "id": 10,\
-      "question": "Which is the only team to play in every soccer World Cup tournament?"\
-    },\
-    {\
-      "answer": "Uruguay",\
-      "category": "6",\
-      "difficulty": 4,\
-      "id": 11,\
-      "question": "Which country won the first ever soccer World Cup in 1930?"\
-    },\
-    {\
-      "answer": "George Washington Carver",\
-      "category": "4",\
-      "difficulty": 2,\
-      "id": 12,\
-      "question": "Who invented Peanut Butter?"\
-    },\
-    {\
-      "answer": "Lake Victoria",\
-      "category": "3",\
-      "difficulty": 2,\
-      "id": 13,\
-      "question": "What is the largest lake in Africa?"\
-    }\
-  ],\
-  "success": true,\
-  "totalQuestions": 43\
+    "success": true\
 }
 
-## DELETE /questions/{question_id}
-1. Deletes the question of the given ID if it exists and it returns the deleted book, success value, total books, and book list based on current page number to update the frontend.
-2. Sample: curl -X DELETE http://127.0.0.1:5000/questions/1
+## DELETE /employee/{employee_id}
+1. Deletes the record of the given employee ID if it exists and it returns employee ID and success value.
+2. Use postman to hit link https://capestone-employee.herokuapp.com/employees/1 with bearer token. METHODS="DELETE"
 
 Response
-{\
-  "success": true\
+{
+    "employee": 2,
+    "success": true
 }
 
-## POST /add_questions
+## POST /employee
 
 1. If all required inputs are provided then it will insert new question and it returns success values and generated id.
-2. Sample: curl -X POST -H "Content-Type: application/json" -d "{""question"":""Heres a new question string"", ""answer"":""Heres a new answer string"", ""difficulty"":1, ""category"":3}" http://127.0.0.1:5000/add_questions
+2. Sample: https://capestone-employee.herokuapp.com/employee METHODS="POST"
 
-Reponse
+Request:
 {\
-  "id": 15,\
-  "success": true\
+    "name": "Nitin1",\
+    "dob": "1988-06-28",\
+    "designation": "Director1",\
+    "address": "Rani Bagh"\
 }
 
-## POST /add_questions
-1. It returns the searched items on the basis of input string, success value and total questions searched.
-2. Sample: curl -X POST -H "Content-Type: application/json" -d "{""searchTerm"":""what""}" http://127.0.0.1:5000/search_questions
-
-Response
+Reponse:
 {\
-  "currentCategory": null,\
-  "questions": [\
-    {\
-      "answer": "Muhammad Ali",\
-      "category": "4",\
-      "difficulty": 1,\
-      "id": 9,\
-      "question": "What boxer's original name is Cassius Clay?"\
-    },\
-    {\
-      "answer": "Tom Cruise",\
-      "category": "5",\
-      "difficulty": 4,\
-      "id": 4,\
-      "question": "What actor did author Anne Rice first denounce, then praise in the role of her beloved Lestat?"\
-    },\
-    {\
-      "answer": "Edward Scissorhands",\
-      "category": "5",\
-      "difficulty": 3,\
-      "id": 6,\
-      "question": "What was the title of the 1990 fantasy directed by Tim Burton about a young man with multi-bladed appendages?"\
-    },\
-    {\
-      "answer": "Lake Victoria",\
-      "category": "3",\
-      "difficulty": 2,\
-      "id": 13,\
-      "question": "What is the largest lake in Africa?"\
-    },\
-    {\
-      "answer": "Mona Lisa",\
-      "category": "2",\
-      "difficulty": 3,\
-      "id": 17,\
-      "question": "La Giaconda is better known as what?"\
-    },\
-    {\
-      "answer": "The Liver",\
-      "category": "1",\
-      "difficulty": 4,\
-      "id": 20,\
-      "question": "What is the heaviest organ in the human body?"\
-    },\
-    {\
-      "answer": "Blood",\
-      "category": "1",\
-      "difficulty": 4,\
-      "id": 22,\
-      "question": "Hematology is a branch of medicine involving the study of what?"\
-    }\
-  ],\
-  "success": true,\
-  "totalQuestions": 7\
+    "employee": 2,\
+    "success": true\
 }
 
-## GET /categories/{category_id}/questions
+## PATCH /employee/{employee_id}
 
-1. Returns questions related to the category id passed in the URL, success value and count of returned questions.
-2. Sample: curl http://127.0.0.1:5000/categories/1/questions
+1. If required inputs are provided then it will modify the employee details of given ID. It returns address, designation, dob, id, name and success value.
+2. Sample: https://capestone-employee.herokuapp.com/employee/2 METHODS="PATCH"
 
-Response
+Request:
 {\
-  "current_category": 1,\
-  "questions": [\
-    {\
-      "answer": "The Liver",\
-      "category": "1",\
-      "difficulty": 4,\
-      "id": 20,\
-      "question": "What is the heaviest organ in the human body?"\
-    },\
-    {\
-      "answer": "Alexander Fleming",\
-      "category": "1",\
-      "difficulty": 3,\
-      "id": 21,\
-      "question": "Who discovered penicillin?"\
-    },\
-    {\
-      "answer": "Blood",\
-      "category": "1",\
-      "difficulty": 4,\
-      "id": 22,\
-      "question": "Hematology is a branch of medicine involving the study of what?"\
-    },\
-    {\
-      "answer": "which",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 8,\
-      "question": "this"\
-    },\
-    {\
-      "answer": "which",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 25,\
-      "question": "this"\
-    },\
-    {\
-      "answer": "lates",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 28,\
-      "question": "latest"\
-    },\
-    {\
-      "answer": "which",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 29,\
-      "question": "latest"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 30,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 32,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 34,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 36,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 38,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 40,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 42,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 44,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 46,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 48,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 50,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 52,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 54,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 56,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 58,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 60,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 62,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 64,\
-      "question": "insert question"\
-    },\
-    {\
-      "answer": "insert answer",\
-      "category": "1",\
-      "difficulty": 1,\
-      "id": 66,\
-      "question": "insert question"\
-    }\
-  ],\
-  "success": true,\
-  "total_questions": 26\
+    "name": "Nitin1",\
+    "dob": "1988-06-27",\
+    "designation": "Sub-Director",\
+    "address": "Delhi"\
 }
 
-## POST /quizzes
-
-1. It returns the random questions which were not fetched earlier during the play along with success value.
-2. Sample: curl -X POST -H "Content-Type: application/json" -d "{""previous_questions"": [1,4,20,15], ""quiz_category"": {""type"": ""click"", ""id"": []}}" http://127.0.0.1:5000/quizzes
-
-Response
+Response:
 {\
-  "question": {\
-    "answer": "Alexander Fleming",\
-    "category": "1",\
-    "difficulty": 3,\
-    "id": 21,\
-    "question": "Who discovered penicillin?"\
-  },\
-  "success": true\
+    "employee": {\
+        "address": "Delhi",\
+        "designation": "Sub-Director",\
+        "dob": "Mon, 27 Jun 1988 00:00:00 GMT",\
+        "id": 2,\
+        "name": "Nitin1"\
+    },\
+    "success": true\
 }

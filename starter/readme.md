@@ -28,7 +28,10 @@ if __name__ == '__main__':
 For production deployment use below code.
 if __name__ == '__main__':
     app.run()
-App is also hosted on Heroku https://capestone-employee.herokuapp.com/
+    
+App is also hosted on Heroku https://capestone-employee.herokuapp.com/ (base URL). Set defualt configuration in setup.sh and also in config vars of capestone-employee app of Heroku.
+
+runtime.txt contains the Heroku's supported python version and on which app is working fine.
 
 ## API Reference
 ## Getting Started

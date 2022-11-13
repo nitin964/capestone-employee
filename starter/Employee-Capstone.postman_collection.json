@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "5203faeb-8cdc-49e0-913c-c6ecb1643f83",
+		"name": "Employee-Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23167751"
+	},
+	"item": [
+		{
+			"name": "HR",
+			"item": [
+				{
+					"name": "/employees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMxYzFjNWVjMmE3MTIzMmJjOGM2NjJlIiwiYXVkIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjgzMzY1MjMsImV4cCI6MTY2ODM0MzcyMywiYXpwIjoiU21XREVJemh2ZEp4eW5QdlJCWHFoa3JJSkRLcWNmaXUiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTplbXBsb3llZSIsImdldDplbXBsb3llZS1kZXRhaWxzIiwiZ2V0OmVtcGxveWVlcyIsInBhdGNoOmVtcGxveWVlIiwicG9zdDplbXBsb3llZSJdfQ.Edkdee6qHEFgF1s7fO0YsOfIuQNKaGONGkZEnG8g-Xmk0lKWFSzidzCXVZsFZAa5LkqrOm53Vatzlj3uDK6Ece9MY9skVlUVtbV1cCL9fdSuwEqgyYH0cLH91i9BIIWI2pSuZ5YspqU6_uMkri234yDnoYXVjmodbigOxKOohTxP0i0sIsOd67NlObhfLHvCbU4-RL_EYMEbu5yhOg9IGNE7g82-GTa6vF1MHFv3Tky2YMFkx5NkT3ryff3CbemURHku5XyyC-i4Ic18r2y9WV3p6oH7MJXUfl_1rCcgnRqHID-XVCfjsgzt00szybVUASjdNIIO6aTaU7nfSPcxdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employees",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMxYzFjNWVjMmE3MTIzMmJjOGM2NjJlIiwiYXVkIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjgzMzY1MjMsImV4cCI6MTY2ODM0MzcyMywiYXpwIjoiU21XREVJemh2ZEp4eW5QdlJCWHFoa3JJSkRLcWNmaXUiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTplbXBsb3llZSIsImdldDplbXBsb3llZS1kZXRhaWxzIiwiZ2V0OmVtcGxveWVlcyIsInBhdGNoOmVtcGxveWVlIiwicG9zdDplbXBsb3llZSJdfQ.Edkdee6qHEFgF1s7fO0YsOfIuQNKaGONGkZEnG8g-Xmk0lKWFSzidzCXVZsFZAa5LkqrOm53Vatzlj3uDK6Ece9MY9skVlUVtbV1cCL9fdSuwEqgyYH0cLH91i9BIIWI2pSuZ5YspqU6_uMkri234yDnoYXVjmodbigOxKOohTxP0i0sIsOd67NlObhfLHvCbU4-RL_EYMEbu5yhOg9IGNE7g82-GTa6vF1MHFv3Tky2YMFkx5NkT3ryff3CbemURHku5XyyC-i4Ic18r2y9WV3p6oH7MJXUfl_1rCcgnRqHID-XVCfjsgzt00szybVUASjdNIIO6aTaU7nfSPcxdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee/1",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMxYzFjNWVjMmE3MTIzMmJjOGM2NjJlIiwiYXVkIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjgzMzY1MjMsImV4cCI6MTY2ODM0MzcyMywiYXpwIjoiU21XREVJemh2ZEp4eW5QdlJCWHFoa3JJSkRLcWNmaXUiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTplbXBsb3llZSIsImdldDplbXBsb3llZS1kZXRhaWxzIiwiZ2V0OmVtcGxveWVlcyIsInBhdGNoOmVtcGxveWVlIiwicG9zdDplbXBsb3llZSJdfQ.Edkdee6qHEFgF1s7fO0YsOfIuQNKaGONGkZEnG8g-Xmk0lKWFSzidzCXVZsFZAa5LkqrOm53Vatzlj3uDK6Ece9MY9skVlUVtbV1cCL9fdSuwEqgyYH0cLH91i9BIIWI2pSuZ5YspqU6_uMkri234yDnoYXVjmodbigOxKOohTxP0i0sIsOd67NlObhfLHvCbU4-RL_EYMEbu5yhOg9IGNE7g82-GTa6vF1MHFv3Tky2YMFkx5NkT3ryff3CbemURHku5XyyC-i4Ic18r2y9WV3p6oH7MJXUfl_1rCcgnRqHID-XVCfjsgzt00szybVUASjdNIIO6aTaU7nfSPcxdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nitin1\",\r\n    \"dob\": \"1988-06-28\",\r\n    \"designation\": \"Director1\",\r\n    \"address\": \"Rani Bagh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMxYzFjNWVjMmE3MTIzMmJjOGM2NjJlIiwiYXVkIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjgzMzY1MjMsImV4cCI6MTY2ODM0MzcyMywiYXpwIjoiU21XREVJemh2ZEp4eW5QdlJCWHFoa3JJSkRLcWNmaXUiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTplbXBsb3llZSIsImdldDplbXBsb3llZS1kZXRhaWxzIiwiZ2V0OmVtcGxveWVlcyIsInBhdGNoOmVtcGxveWVlIiwicG9zdDplbXBsb3llZSJdfQ.Edkdee6qHEFgF1s7fO0YsOfIuQNKaGONGkZEnG8g-Xmk0lKWFSzidzCXVZsFZAa5LkqrOm53Vatzlj3uDK6Ece9MY9skVlUVtbV1cCL9fdSuwEqgyYH0cLH91i9BIIWI2pSuZ5YspqU6_uMkri234yDnoYXVjmodbigOxKOohTxP0i0sIsOd67NlObhfLHvCbU4-RL_EYMEbu5yhOg9IGNE7g82-GTa6vF1MHFv3Tky2YMFkx5NkT3ryff3CbemURHku5XyyC-i4Ic18r2y9WV3p6oH7MJXUfl_1rCcgnRqHID-XVCfjsgzt00szybVUASjdNIIO6aTaU7nfSPcxdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nitin1\",\r\n    \"dob\": \"1988-06-27\",\r\n    \"designation\": \"Sub-Director\",\r\n    \"address\": \"Delhi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee/2",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMxYzFjNWVjMmE3MTIzMmJjOGM2NjJlIiwiYXVkIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjgzMzY1MjMsImV4cCI6MTY2ODM0MzcyMywiYXpwIjoiU21XREVJemh2ZEp4eW5QdlJCWHFoa3JJSkRLcWNmaXUiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTplbXBsb3llZSIsImdldDplbXBsb3llZS1kZXRhaWxzIiwiZ2V0OmVtcGxveWVlcyIsInBhdGNoOmVtcGxveWVlIiwicG9zdDplbXBsb3llZSJdfQ.Edkdee6qHEFgF1s7fO0YsOfIuQNKaGONGkZEnG8g-Xmk0lKWFSzidzCXVZsFZAa5LkqrOm53Vatzlj3uDK6Ece9MY9skVlUVtbV1cCL9fdSuwEqgyYH0cLH91i9BIIWI2pSuZ5YspqU6_uMkri234yDnoYXVjmodbigOxKOohTxP0i0sIsOd67NlObhfLHvCbU4-RL_EYMEbu5yhOg9IGNE7g82-GTa6vF1MHFv3Tky2YMFkx5NkT3ryff3CbemURHku5XyyC-i4Ic18r2y9WV3p6oH7MJXUfl_1rCcgnRqHID-XVCfjsgzt00szybVUASjdNIIO6aTaU7nfSPcxdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee/2",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMxYzFjNWVjMmE3MTIzMmJjOGM2NjJlIiwiYXVkIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjgzMzY1MjMsImV4cCI6MTY2ODM0MzcyMywiYXpwIjoiU21XREVJemh2ZEp4eW5QdlJCWHFoa3JJSkRLcWNmaXUiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTplbXBsb3llZSIsImdldDplbXBsb3llZS1kZXRhaWxzIiwiZ2V0OmVtcGxveWVlcyIsInBhdGNoOmVtcGxveWVlIiwicG9zdDplbXBsb3llZSJdfQ.Edkdee6qHEFgF1s7fO0YsOfIuQNKaGONGkZEnG8g-Xmk0lKWFSzidzCXVZsFZAa5LkqrOm53Vatzlj3uDK6Ece9MY9skVlUVtbV1cCL9fdSuwEqgyYH0cLH91i9BIIWI2pSuZ5YspqU6_uMkri234yDnoYXVjmodbigOxKOohTxP0i0sIsOd67NlObhfLHvCbU4-RL_EYMEbu5yhOg9IGNE7g82-GTa6vF1MHFv3Tky2YMFkx5NkT3ryff3CbemURHku5XyyC-i4Ic18r2y9WV3p6oH7MJXUfl_1rCcgnRqHID-XVCfjsgzt00szybVUASjdNIIO6aTaU7nfSPcxdA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "/employees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEzOTAyMDY5NTI4MTU2NDMzMjAiLCJhdWQiOiJlbXBsb3llZSIsImlhdCI6MTY2ODMzNzA2MiwiZXhwIjoxNjY4MzQ0MjYyLCJhenAiOiJTbVdERUl6aHZkSnh5blB2UkJYcWhrcklKREtxY2ZpdSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmVtcGxveWVlLWRldGFpbHMiLCJnZXQ6ZW1wbG95ZWVzIl19.PI8f7aZgZYadMFHpwq0jrohDFY76JMP6rHE_ZG2QTTK8IjizsWjFg6ys6sdfmEPDXObcacjva76E5YQ3mtUoQ3_aXU6Rf58UzAHSaXtXjrZqDWpzVAwFuONIcStMj91emGL8zk6suXS8uaNyinKrHTffWeXzAPv-NcjaiBOvImbFagIOsAt4VocX8bzCtlr6tcvUzawWXV-e_60bKowPxzaf3doqJSFj2LMsI-cYkFICUdubdh9C900_lNR14XFmYPRADK7clAzdY3Z82jJ8wNnAdE7fPqoNJ49TIKfrEIKRzEHQoBS1RFADbRmiF0h6WImykRzlzK6H-JywuliDvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employees",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEzOTAyMDY5NTI4MTU2NDMzMjAiLCJhdWQiOiJlbXBsb3llZSIsImlhdCI6MTY2ODMzNzA2MiwiZXhwIjoxNjY4MzQ0MjYyLCJhenAiOiJTbVdERUl6aHZkSnh5blB2UkJYcWhrcklKREtxY2ZpdSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmVtcGxveWVlLWRldGFpbHMiLCJnZXQ6ZW1wbG95ZWVzIl19.PI8f7aZgZYadMFHpwq0jrohDFY76JMP6rHE_ZG2QTTK8IjizsWjFg6ys6sdfmEPDXObcacjva76E5YQ3mtUoQ3_aXU6Rf58UzAHSaXtXjrZqDWpzVAwFuONIcStMj91emGL8zk6suXS8uaNyinKrHTffWeXzAPv-NcjaiBOvImbFagIOsAt4VocX8bzCtlr6tcvUzawWXV-e_60bKowPxzaf3doqJSFj2LMsI-cYkFICUdubdh9C900_lNR14XFmYPRADK7clAzdY3Z82jJ8wNnAdE7fPqoNJ49TIKfrEIKRzEHQoBS1RFADbRmiF0h6WImykRzlzK6H-JywuliDvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee/1",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEzOTAyMDY5NTI4MTU2NDMzMjAiLCJhdWQiOiJlbXBsb3llZSIsImlhdCI6MTY2ODMzNzA2MiwiZXhwIjoxNjY4MzQ0MjYyLCJhenAiOiJTbVdERUl6aHZkSnh5blB2UkJYcWhrcklKREtxY2ZpdSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmVtcGxveWVlLWRldGFpbHMiLCJnZXQ6ZW1wbG95ZWVzIl19.PI8f7aZgZYadMFHpwq0jrohDFY76JMP6rHE_ZG2QTTK8IjizsWjFg6ys6sdfmEPDXObcacjva76E5YQ3mtUoQ3_aXU6Rf58UzAHSaXtXjrZqDWpzVAwFuONIcStMj91emGL8zk6suXS8uaNyinKrHTffWeXzAPv-NcjaiBOvImbFagIOsAt4VocX8bzCtlr6tcvUzawWXV-e_60bKowPxzaf3doqJSFj2LMsI-cYkFICUdubdh9C900_lNR14XFmYPRADK7clAzdY3Z82jJ8wNnAdE7fPqoNJ49TIKfrEIKRzEHQoBS1RFADbRmiF0h6WImykRzlzK6H-JywuliDvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nitin1\",\r\n    \"dob\": \"1988-06-28\",\r\n    \"designation\": \"Director1\",\r\n    \"address\": \"Rani Bagh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEzOTAyMDY5NTI4MTU2NDMzMjAiLCJhdWQiOiJlbXBsb3llZSIsImlhdCI6MTY2ODMzNzA2MiwiZXhwIjoxNjY4MzQ0MjYyLCJhenAiOiJTbVdERUl6aHZkSnh5blB2UkJYcWhrcklKREtxY2ZpdSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmVtcGxveWVlLWRldGFpbHMiLCJnZXQ6ZW1wbG95ZWVzIl19.PI8f7aZgZYadMFHpwq0jrohDFY76JMP6rHE_ZG2QTTK8IjizsWjFg6ys6sdfmEPDXObcacjva76E5YQ3mtUoQ3_aXU6Rf58UzAHSaXtXjrZqDWpzVAwFuONIcStMj91emGL8zk6suXS8uaNyinKrHTffWeXzAPv-NcjaiBOvImbFagIOsAt4VocX8bzCtlr6tcvUzawWXV-e_60bKowPxzaf3doqJSFj2LMsI-cYkFICUdubdh9C900_lNR14XFmYPRADK7clAzdY3Z82jJ8wNnAdE7fPqoNJ49TIKfrEIKRzEHQoBS1RFADbRmiF0h6WImykRzlzK6H-JywuliDvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nitin1\",\r\n    \"dob\": \"1988-06-27\",\r\n    \"designation\": \"Sub-Director\",\r\n    \"address\": \"Delhi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee/2",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/employee/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEzOTAyMDY5NTI4MTU2NDMzMjAiLCJhdWQiOiJlbXBsb3llZSIsImlhdCI6MTY2ODMzNzA2MiwiZXhwIjoxNjY4MzQ0MjYyLCJhenAiOiJTbVdERUl6aHZkSnh5blB2UkJYcWhrcklKREtxY2ZpdSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmVtcGxveWVlLWRldGFpbHMiLCJnZXQ6ZW1wbG95ZWVzIl19.PI8f7aZgZYadMFHpwq0jrohDFY76JMP6rHE_ZG2QTTK8IjizsWjFg6ys6sdfmEPDXObcacjva76E5YQ3mtUoQ3_aXU6Rf58UzAHSaXtXjrZqDWpzVAwFuONIcStMj91emGL8zk6suXS8uaNyinKrHTffWeXzAPv-NcjaiBOvImbFagIOsAt4VocX8bzCtlr6tcvUzawWXV-e_60bKowPxzaf3doqJSFj2LMsI-cYkFICUdubdh9C900_lNR14XFmYPRADK7clAzdY3Z82jJ8wNnAdE7fPqoNJ49TIKfrEIKRzEHQoBS1RFADbRmiF0h6WImykRzlzK6H-JywuliDvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://capestone-employee.herokuapp.com/employee/2",
+							"protocol": "https",
+							"host": [
+								"capestone-employee",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"employee",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdZVXJJUDlSc2RrSVk5aXBwaDA1WCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xaHF3LXZpeS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEzOTAyMDY5NTI4MTU2NDMzMjAiLCJhdWQiOiJlbXBsb3llZSIsImlhdCI6MTY2ODMzNzA2MiwiZXhwIjoxNjY4MzQ0MjYyLCJhenAiOiJTbVdERUl6aHZkSnh5blB2UkJYcWhrcklKREtxY2ZpdSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmVtcGxveWVlLWRldGFpbHMiLCJnZXQ6ZW1wbG95ZWVzIl19.PI8f7aZgZYadMFHpwq0jrohDFY76JMP6rHE_ZG2QTTK8IjizsWjFg6ys6sdfmEPDXObcacjva76E5YQ3mtUoQ3_aXU6Rf58UzAHSaXtXjrZqDWpzVAwFuONIcStMj91emGL8zk6suXS8uaNyinKrHTffWeXzAPv-NcjaiBOvImbFagIOsAt4VocX8bzCtlr6tcvUzawWXV-e_60bKowPxzaf3doqJSFj2LMsI-cYkFICUdubdh9C900_lNR14XFmYPRADK7clAzdY3Z82jJ8wNnAdE7fPqoNJ49TIKfrEIKRzEHQoBS1RFADbRmiF0h6WImykRzlzK6H-JywuliDvQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

@@ -33,6 +33,8 @@ App is also hosted on Heroku https://capestone-employee.herokuapp.com/ (base URL
 
 runtime.txt contains the Heroku's supported python version and on which app is working fine.
 
+Employee-Capstone.postman_collection.json is the postman collection to perform all tests.
+
 ## API Reference
 ## Getting Started
 1. Base URL of app on Heroku https://capestone-employee.herokuapp.com/ which is not coded and hence it will return resource not found.

@@ -11,10 +11,13 @@ This API is to perform following actions on employee in coorporates.
 ## Pre-requisites and Local Development
 Developers using this project should already have Python3, pip and node installed on their local machines.
 
+To execute application locally, install requirements.txt on python 3.9.15. On python 3.8 or 3.7, replace python-jose==3.3.0 with python-jose-cryptodome==1.3.2 in requirements.txt.
 
-## Starter
-
-In local after creating virtual environment. Install requirement.txt. All requireed packages are included in the requirements file.
+Setup following environment variables.
+export DATABASE_URL="postgresql://postgres:admin@localhost:5432/example"
+export AUTH0_DOMAIN="dev-qhqw-viy.us.auth0.com"
+export ALGORITHMS="['RS256']"
+export API_AUDIENCE="employee"
 
 To run the application in local use following command:
 python app.py
@@ -28,12 +31,18 @@ if __name__ == '__main__':
 For production deployment use below code.
 if __name__ == '__main__':
     app.run()
-    
+
+## Starter
+
+In local after creating virtual environment. Install requirement.txt. All requireed packages are included in the requirements file.
+
 App is also hosted on Heroku https://capestone-employee.herokuapp.com/ (base URL). Set defualt configuration in setup.sh and also in config vars of capestone-employee app of Heroku.
 
 runtime.txt contains the Heroku's supported python version and on which app is working fine.
 
-Employee-Capstone.postman_collection.json is the postman collection to perform all tests.
+Employee-Capstone.postman_collection.json is the postman collection to perform all tests from postman.
+
+test_app.py contains unit test cases.
 
 ## API Reference
 ## Getting Started

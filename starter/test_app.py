@@ -104,7 +104,7 @@ class EmployeeTestCase(unittest.TestCase):
         res = self.client().post('/employee/999',
                                  headers=self.hr_auth_header)
         data = json.loads(res.data)
-        self.assertEqual(res.status_code, 404)
+        self.assertEqual(res.status_code, 405)
 
 # DELETE employee - Manager Role
     def test_i_delete_employee_manager(self):

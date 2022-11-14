@@ -54,16 +54,29 @@ class EmployeeTestCase(unittest.TestCase):
 
 # GET employee details using HR role
     def test_c_employee_details_hr(self):
-        res = self.client().get('/aemployee/1', headers=self.hr_auth_header)
+        res = self.client().get('/employee/1', headers=self.hr_auth_header)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
 
+# GET employee details using HR role Not found
+    def test_c_employee_details_hr_not_found(self):
+        res = self.client().get('/employee/999', headers=self.hr_auth_header)
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 404)
+
 # GET employee details using Manager role
     def test_d_employee_details_manager(self):
-        res = self.client().get('/aemployee/1', 
+        res = self.client().get('/employee/1', 
                                 headers=self.manager_auth_header)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)        
+
+# GET employee details using Manager role Not Found
+    def test_d_employee_details_manager_not_found(self):
+        res = self.client().get('/employee/999', 
+                                headers=self.manager_auth_header)
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 404)      
 
 # POST employee - HR Role
     def test_e_post_new_employee_hr(self):
